@@ -1,0 +1,247 @@
+{
+  "info": {
+    "_postman_id": "crud-api-sekolah",
+    "name": "CRUD API Sekolah",
+    "description": "API untuk CRUD Siswa, Guru, dan Kelas",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Siswa",
+      "item": [
+        {
+          "name": "Create Siswa",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nama\": \"John Doe\",\n  \"nisn\": \"1234567890\",\n  \"kelas_id\": 1,\n  \"no_telepon\": \"08123456789\",\n  \"alamat\": \"Jl. Merdeka No. 1\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/siswa/create",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "siswa", "create"]
+            }
+          }
+        },
+        {
+          "name": "Read All Siswa",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/siswa/read",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "siswa", "read"]
+            }
+          }
+        },
+        {
+          "name": "Update Siswa",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nama\": \"Jane Doe\",\n  \"no_telepon\": \"08987654321\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/siswa/update/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "siswa", "update", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete Siswa",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/siswa/delete/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "siswa", "delete", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Guru",
+      "item": [
+        {
+          "name": "Create Guru",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nama\": \"Budi Santoso\",\n  \"nip\": \"198001011234567\",\n  \"mata_pelajaran\": \"Matematika\",\n  \"no_telepon\": \"08123456789\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/guru/create",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "guru", "create"]
+            }
+          }
+        },
+        {
+          "name": "Read All Guru",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/guru/read",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "guru", "read"]
+            }
+          }
+        },
+        {
+          "name": "Update Guru",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nama\": \"Budi Santoso Updated\",\n  \"mata_pelajaran\": \"Fisika\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/guru/update/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "guru", "update", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete Guru",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/guru/delete/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "guru", "delete", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Kelas",
+      "item": [
+        {
+          "name": "Create Kelas",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nama_kelas\": \"X-IPA-1\",\n  \"tingkat\": \"10\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/kelas/create",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "kelas", "create"]
+            }
+          }
+        },
+        {
+          "name": "Read All Kelas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/kelas/read",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "kelas", "read"]
+            }
+          }
+        },
+        {
+          "name": "Update Kelas",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nama_kelas\": \"X-IPA-2\",\n  \"tingkat\": \"10\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/kelas/update/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "kelas", "update", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete Kelas",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/kelas/delete/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "kelas", "delete", "1"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
